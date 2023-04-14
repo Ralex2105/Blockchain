@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  node_alpha:
+    build: .
+    network_mode: "host"
+    command: python -u src/main/Main.py 127.0.0.1 7 False
+
+  node_beta:
+    build: .
+    network_mode: "host"
+    command: python -u src/main/Main.py 127.0.0.1 70002 False
+
+  node_gamma:
+    build: .
+    network_mode: "host"
+    command: python -u src/main/Main.py 127.0.0.1 70003 False
