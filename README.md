@@ -29,8 +29,8 @@ develop [![Tests for blockchain](https://github.com/Ralex2105/Blockchain/actions
 2) Перейти в папку проекта
 
 ```
-docker-compose build
-docker-compose up   
+docker build -t ralex2105/blockchain/src/main:latest .
+docker-compose up 
 ```
 
 ## Тестирование
