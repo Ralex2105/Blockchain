@@ -13,10 +13,12 @@ class Node:
         if int(json.loads(received_block)['index']) == 0:
             self.list_block.append(received_block)
             self.block_index = 0
+            print(block_to_string(json.loads(received_block)))
             return True
         if int(json.loads(received_block)['index']) > json.loads(self.list_block[-1])['index']:
             self.list_block.append(received_block)
             self.block_index = int(json.loads(received_block)['index'])
+            print(block_to_string(json.loads(received_block)))
             return True
         return False
 
