@@ -1,5 +1,6 @@
 from flask import Flask, request
 import time
+import logging
 import threading
 import grequests
 import json
@@ -20,6 +21,8 @@ def start(host, current_node):
         current_port = 5002
         port2 = 5000
         port3 = 5001
+
+    logging.getLogger('werkzeug').disabled = True
     servers_urls = [f'http://localhost:{current_port}/', f'http://localhost:{port2}/', f'http://localhost:{port3}/']
 
     def new_blocks_generator():
